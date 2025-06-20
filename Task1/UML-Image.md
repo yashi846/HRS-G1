@@ -1,6 +1,9 @@
 # 演習1: ドメイン分析
 ## オブジェクト図の写真
-![image](https://github.com/user-attachments/assets/be6bfd41-468d-4e43-8bde-1349c86b4460)
+![image](https://github.com/user-attachments/assets/443458d9-55ea-4435-8847-a2b7e709b1e8)
 
 ## クラス図の写真
 ![image](https://github.com/user-attachments/assets/81727ad0-cc88-4b10-9f60-37d4dab9a17d)
+
+## シナリオ
+利用者の山田太郎は、希望の部屋（内容で指定）、2025/06/20 9:00 ~ 2025/06/21 11:00の期間、宿泊人数2人の内容で予約をした。山田太郎は予約番号が012345で宿泊料が10000円であることを確認した。
