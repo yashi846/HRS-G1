@@ -3,6 +3,13 @@
 
 ![image](https://github.com/user-attachments/assets/1174e749-0edf-4cb9-877d-e07e4b8728bd)
 
+# アクティビティ図
+## チェックアウト
+### ユースケース記述
+[ユースケース記述.docx](https://github.com/user-attachments/files/20920033/default.docx)
+### アクティビティ図
+<img width="751" alt="スクリーンショット 2025-06-26 15 50 02" src="https://github.com/user-attachments/assets/b99a8a93-ed37-4177-81a7-f94ded90b6cb" />
+
 
 # アクティビティ図
 ## チェックアウト
