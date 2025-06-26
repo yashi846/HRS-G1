@@ -12,6 +12,16 @@
 ### アクティビティ図
 <img width="751" alt="スクリーンショット 2025-06-26 15 50 02" src="https://github.com/user-attachments/assets/b99a8a93-ed37-4177-81a7-f94ded90b6cb" />
 
+# アクティビティ図
+## チェックイン
+### ユースケース記述
+<img width="526" alt="スクリーンショット 2025-06-26 17 33 13" src="https://github.com/user-attachments/assets/e3088594-9211-4629-8cbe-05ec38c3297e" />
+
+### アクティビティ図
+<img width="677" alt="スクリーンショット 2025-06-26 17 31 35" src="https://github.com/user-attachments/assets/61468e39-fcd7-4c0a-83bd-61074a31c13f" />
+
+
+
 
 # アクティビティ図
 ## チェックアウト
