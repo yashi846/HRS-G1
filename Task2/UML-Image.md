@@ -6,17 +6,20 @@
 # アクティビティ図
 ## 部屋の予約
 ### ユースケース記述
-<img width="621" alt="スクリーンショット 2025-06-27 11 35 41" src="https://github.com/user-attachments/assets/5412d363-a8cc-4cc5-80c8-7586b2eb2082" />
+<img width="528" alt="スクリーンショット 2025-06-27 15 28 39" src="https://github.com/user-attachments/assets/753c42c2-baad-4db5-aef6-89ca8791a4df" />
 
 
-### アクティビティ図
-<img width="707" alt="スクリーンショット 2025-06-27 11 30 09" src="https://github.com/user-attachments/assets/5ca30f18-e849-4971-af97-dba2a04b34d7" />
+### アクティビティ
+<img width="555" alt="スクリーンショット 2025-06-27 15 29 03" src="https://github.com/user-attachments/assets/052a69b0-b167-446b-8a6b-e7ac02d03634" />
+
+
 
 
 # アクティビティ図
 ## チェックイン
 ### ユースケース記述
-<img width="526" alt="スクリーンショット 2025-06-26 17 33 13" src="https://github.com/user-attachments/assets/e3088594-9211-4629-8cbe-05ec38c3297e" />
+<img width="528" alt="スクリーンショット 2025-06-27 15 28 21" src="https://github.com/user-attachments/assets/f928f75a-cdf6-4489-8184-28ac47addcb9" />
+
 
 ### アクティビティ図
 <img width="670" alt="スクリーンショット 2025-06-27 10 46 59" src="https://github.com/user-attachments/assets/8f6fc364-2cb5-47f6-8db8-f444cbe15d38" />
