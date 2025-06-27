@@ -21,13 +21,11 @@
 <img width="670" alt="スクリーンショット 2025-06-27 10 46 59" src="https://github.com/user-attachments/assets/8f6fc364-2cb5-47f6-8db8-f444cbe15d38" />
 
 
-
-
-
 # アクティビティ図
 ## チェックアウト
 ### ユースケース記述
-![UseCaseDiagram](https://github.com/user-attachments/assets/2d32b55e-5534-4cdc-b2fc-e8d993770c9e)
+![UseCaseDiagram](https://github.com/user-attachments/assets/8f665659-d051-48b5-b95e-64c84543ce4b)
 
 ### アクティビティ図
 ![ActivityDiagram](https://github.com/user-attachments/assets/7eff6fd3-75e9-418e-966b-8148436a47c7)
+
