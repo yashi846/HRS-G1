@@ -23,8 +23,9 @@
 # アクティビティ図
 ## チェックアウト
 ### ユースケース記述
-![UseCaseDiagram](https://github.com/user-attachments/assets/8f665659-d051-48b5-b95e-64c84543ce4b)
+![UseCaseDescription](https://github.com/user-attachments/assets/75c6018b-e9cb-478b-a62b-1e2d4c7b0cdc)
 
 ### アクティビティ図
-![ActivityDiagram](https://github.com/user-attachments/assets/7eff6fd3-75e9-418e-966b-8148436a47c7)
+![ActivityDiagram](https://github.com/user-attachments/assets/050cc44e-1c1d-4e84-b2c9-b2963404ae4e)
+
 
