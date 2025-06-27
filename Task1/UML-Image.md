@@ -1,9 +1,9 @@
 # 演習1: ドメイン分析
 ## オブジェクト図の写真
-![image](https://github.com/user-attachments/assets/443458d9-55ea-4435-8847-a2b7e709b1e8)
+![ObjectDiagram](https://github.com/user-attachments/assets/c23289cb-b18f-4189-96a2-fa4c831c0819)
 
 ## クラス図の写真
-![image](https://github.com/user-attachments/assets/8b5c1cc8-6395-4fc8-ae96-03e76fdbf9f5)
+![ClassDiagram](https://github.com/user-attachments/assets/4b432e02-fbd6-45a9-8522-e188477d152d)
 
 ## シナリオ
-利用者の山田太郎は、希望の部屋（内容で指定）、2025/06/20 9:00 ~ 2025/06/21 11:00の期間、宿泊人数2人の内容で予約をした。山田太郎は予約番号が012345で宿泊料が10000円であることを確認した。
+山田太郎は、チェックイン日時、チェックアウト日時、人数を入力した。次に、希望の部屋グレードとプランを選択し、料金が表示された。その後、氏名、電話番号、メールアドレスを入力し、予約確定を行った。予約確定後、山田太郎は予約番号「12345」と宿泊料金「15,000円」であることを確認した。
