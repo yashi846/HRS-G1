@@ -18,7 +18,8 @@
 <img width="526" alt="スクリーンショット 2025-06-26 17 33 13" src="https://github.com/user-attachments/assets/e3088594-9211-4629-8cbe-05ec38c3297e" />
 
 ### アクティビティ図
-<img width="677" alt="スクリーンショット 2025-06-26 17 31 35" src="https://github.com/user-attachments/assets/61468e39-fcd7-4c0a-83bd-61074a31c13f" />
+<img width="635" alt="スクリーンショット 2025-06-27 10 43 28" src="https://github.com/user-attachments/assets/38f8583c-485c-4965-9a55-61a9051e1550" />
+
 
 
 
