@@ -6,7 +6,8 @@
 ### チェックアウト
 ![image](https://github.com/user-attachments/assets/7bb37837-2460-4423-9cfd-a523270f6771)
 ### 部屋の予約
-![Uploading 部屋の予約の相互作用ver4.png…]()
+![部屋の予約の相互作用ver4](https://github.com/user-attachments/assets/bbed5410-b181-4b78-80b8-1de65467ef26)
+
 
 
 
