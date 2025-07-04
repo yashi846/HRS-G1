@@ -30,9 +30,12 @@
 # アクティビティ図
 ## チェックアウト
 ### ユースケース記述
-![UseCaseDescription](https://github.com/user-attachments/assets/358cae4b-e3cc-42e8-85d7-bbb3bb81190c)
+<img width="399" alt="スクリーンショット 2025-07-04 11 52 38" src="https://github.com/user-attachments/assets/48933ce8-d4c3-4a6c-a90d-e1ae09b7d004" />
 
 ### アクティビティ図
-![ActivityDiagram](https://github.com/user-attachments/assets/050cc44e-1c1d-4e84-b2c9-b2963404ae4e)
+<img width="675" alt="スクリーンショット 2025-07-04 11 52 17" src="https://github.com/user-attachments/assets/f49a54e4-df71-404c-96a3-73cf3f9ec01d" />
+
+
+
 
 
