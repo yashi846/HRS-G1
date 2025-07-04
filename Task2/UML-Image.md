@@ -6,11 +6,12 @@
 # アクティビティ図
 ## 部屋の予約
 ### ユースケース記述
-<img width="397" alt="スクリーンショット 2025-06-29 0 44 39" src="https://github.com/user-attachments/assets/d2a855c8-6c8c-45fc-8f99-7eaa278cf211" />
+![部屋の予約_ユースケース記述](https://github.com/user-attachments/assets/45369b7c-8e38-433c-84b2-bb0c4ca1e1cb)
 
 
 ### アクティビティ図
-<img width="543" alt="スクリーンショット 2025-06-29 0 44 06" src="https://github.com/user-attachments/assets/ef101fa3-5572-4fae-8190-8173c10409cf" />
+![部屋の予約_アクティビティ図](https://github.com/user-attachments/assets/074b62f9-28d7-498d-b4c5-230104fca52e)
+
 
 
 
