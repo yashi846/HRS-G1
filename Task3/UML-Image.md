@@ -11,4 +11,4 @@
 ![image](https://github.com/user-attachments/assets/d41f21b2-5ca0-4dce-a5aa-aadc9e17a6fc)
 
 ## クラス図の写真
-![image](https://github.com/user-attachments/assets/19f4a4b7-aead-43c5-b319-90fc56ace9b1)
+![image](https://github.com/user-attachments/assets/5dfe81a5-c67e-46a8-9d4a-ad7e6fefeaac)
