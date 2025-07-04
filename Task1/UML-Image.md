@@ -1,6 +1,6 @@
-![object-diagram](https://github.com/user-attachments/assets/068c689a-1201-4e81-8657-ceaebb4fa4fa)# 演習1: ドメイン分析
+# 演習1: ドメイン分析
 ## オブジェクト図の写真
-![Uploading object-diagram.png…]()
+![object-diagram](https://github.com/user-attachments/assets/068c689a-1201-4e81-8657-ceaebb4fa4fa)
 
 ## クラス図の写真
 ![class-diagram](https://github.com/user-attachments/assets/d6cf681e-ebce-4d31-927b-fe8217d00d36)
