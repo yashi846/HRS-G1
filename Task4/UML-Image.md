@@ -1,13 +1,13 @@
 演習4:アーキテクチャ設計
 
 # パッケージ図またはクラス図
-![pacagedClassDiagram](https://github.com/user-attachments/assets/c8905e7c-8cad-4f9c-813d-c42d581b0a4c)
+![image](https://github.com/user-attachments/assets/a0b59ea1-44d6-4387-b510-b630fb05fe9a)
 
 # ユーザーインターフェース
-![userInterface](https://github.com/user-attachments/assets/cbbe85c7-97ba-43ab-80f8-ce762784c4ef)
+![image](https://github.com/user-attachments/assets/ab4a1f84-9f86-4b72-b561-494d66656929)
 
 # アプリケーション
-![application](https://github.com/user-attachments/assets/af55ac77-6371-424b-998d-6028ad6b986d)
+![image](https://github.com/user-attachments/assets/1b636fa3-2f50-49a7-a15b-e721dbda7321)
 
 # ドメイン
-![domain](https://github.com/user-attachments/assets/e90b1ca9-2046-40fd-8d16-2fbd3344a786)
+![image](https://github.com/user-attachments/assets/a325e376-9e88-4920-bfa3-00a6547fee07)
