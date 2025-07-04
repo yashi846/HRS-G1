@@ -11,4 +11,4 @@
 ![部屋の予約の相互作用ver4](https://github.com/user-attachments/assets/bbed5410-b181-4b78-80b8-1de65467ef26)
 
 ## クラス図の写真
-![image](https://github.com/user-attachments/assets/ab93f3f3-3b49-4d83-9414-01c4ee91edb8)
+![image](https://github.com/user-attachments/assets/19f4a4b7-aead-43c5-b319-90fc56ace9b1)
