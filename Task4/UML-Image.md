@@ -1,13 +1,13 @@
 演習4:アーキテクチャ設計
 
 # パッケージ図またはクラス図
-![image](https://github.com/user-attachments/assets/a0b59ea1-44d6-4387-b510-b630fb05fe9a)
+![classDiageam](https://github.com/user-attachments/assets/240f3dc4-4a6b-4fd8-a893-93ef6968013f)
 
 # ユーザーインターフェース
-![image](https://github.com/user-attachments/assets/ab4a1f84-9f86-4b72-b561-494d66656929)
+![userinterface](https://github.com/user-attachments/assets/2bd217e5-a7a2-4589-913d-b863d4dccea7)
 
 # アプリケーション
-![image](https://github.com/user-attachments/assets/1b636fa3-2f50-49a7-a15b-e721dbda7321)
+![application](https://github.com/user-attachments/assets/daf29ecd-7e20-4294-b86b-31c2b35f5aa2)
 
 # ドメイン
-![image](https://github.com/user-attachments/assets/a325e376-9e88-4920-bfa3-00a6547fee07)
+![domain](https://github.com/user-attachments/assets/05e64a4d-68f1-471e-9653-5143c2c65c65)
