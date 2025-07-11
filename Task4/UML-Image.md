@@ -1,14 +1,13 @@
 演習4:アーキテクチャ設計
 
 # パッケージ図またはクラス図
-<img width="1566" height="912" alt="classDiagram" src="https://github.com/user-attachments/assets/3d0c36d4-7354-4f28-9e01-e1de170e9266" />
+<img width="3910" height="2289" alt="image" src="https://github.com/user-attachments/assets/561f926a-1fb9-4cc2-b683-4f977c50899c" />
 
 # ユーザーインターフェース
-<img width="1445" height="395" alt="userInterface" src="https://github.com/user-attachments/assets/dcb7230b-ed95-4ae6-933a-f88c05a1f352" />
+<img width="1845" height="505" alt="image" src="https://github.com/user-attachments/assets/f22aedba-a9b1-4bf7-a0c5-046762cb6cb2" />
 
 # アプリケーション
-<img width="1855" height="336" alt="application" src="https://github.com/user-attachments/assets/0bf0cc57-4fda-4bd7-a96a-aad92f924bfa" />
+<img width="1773" height="341" alt="image" src="https://github.com/user-attachments/assets/2d6e65ee-050c-4cf6-93d7-0ef94350d402" />
 
 # ドメイン
-<img width="1579" height="488" alt="domain" src="https://github.com/user-attachments/assets/70ad14d9-a768-4130-9cf1-32ec3ec9b0eb" />
-
+<img width="1796" height="595" alt="image" src="https://github.com/user-attachments/assets/6c465575-023c-404f-af57-97f702f68184" />
