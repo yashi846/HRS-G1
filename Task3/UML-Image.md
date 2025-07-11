@@ -12,4 +12,4 @@
 <img width="2179" height="1420" alt="image" src="https://github.com/user-attachments/assets/a3ee82cb-a802-42e6-a7f6-b35dda4d8fbb" />
 
 ## クラス図の写真
-![image](https://github.com/user-attachments/assets/12ef1a28-f369-492c-a69b-13b17e424b13)
+<img width="3066" height="2057" alt="image" src="https://github.com/user-attachments/assets/1db90c42-3a72-4b33-8752-e9ba21cf1131" />
