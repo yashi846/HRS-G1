@@ -1,5 +1,6 @@
 # 演習6：保守
-##　6-1:クラス図(差分なし)
+## 6-1:クラス図
+差分なし
 
 ## 6-1:ユースケース記述
 <img width="600" height="560" alt="演習6-2_予約のキャンセル_ユースケース記述" src="https://github.com/user-attachments/assets/51f07abd-a049-4c8d-8f1e-8243d7095e72" />
