@@ -9,7 +9,7 @@
 
 
 ### 部屋の予約
-<img width="2179" height="1420" alt="image" src="https://github.com/user-attachments/assets/702207f8-321d-41ff-99e2-86c4f318c301" />
+<img width="2179" height="1420" alt="image" src="https://github.com/user-attachments/assets/a3ee82cb-a802-42e6-a7f6-b35dda4d8fbb" />
 
 ## クラス図の写真
 ![image](https://github.com/user-attachments/assets/12ef1a28-f369-492c-a69b-13b17e424b13)
