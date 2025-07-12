@@ -9,5 +9,6 @@
 <img width="937" height="736" alt="演習6-2_予約のキャンセルの相互作用" src="https://github.com/user-attachments/assets/77ce70e3-b18a-4368-9968-62eb05d08615" />
 
 ## 6-3:コミュニケーション図
+<img width="880" height="666" alt="演習6-3-1_予約のキャンセルの相互作用" src="https://github.com/user-attachments/assets/815595ab-c6df-483e-9f7a-30b6fe6d7aff" />
 
 ## 6-3:分析レベルクラス図
