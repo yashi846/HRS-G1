@@ -1,0 +1,20 @@
+sequenceDiagram
+    participant 利用者
+    participant フロント
+    participant CheckinUI
+    participant CheckinControl
+    participant Reservation
+    participant Room
+
+    利用者->>フロント: 1. 予約番号を伝える
+    フロント->>CheckinUI: 2. inputReservationNum()
+    CheckinUI->>CheckinControl: 2.1. checkin(reservationNo: int)
+    CheckinControl->>Reservation: 2.1.1. getReservationInfo()
+    alt 予約が存在する
+        CheckinControl->>Reservation: 2.1.2. setCheckinDone()
+        CheckinUI->>フロント: 2.2. showCheckinComplete(roomNo: int)
+        フロント->>利用者: 3. 部屋番号を伝達する
+    else 予約が存在しない
+        CheckinUI->>フロント: 2.3. showAlert()
+        フロント->>利用者: 4. 警告を伝達する
+    end

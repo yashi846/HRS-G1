@@ -1,0 +1,44 @@
+<実装方法>
+ホテルの予約システムです。
+Javaで実装
+コマンドラインで入出力
+最初の画面は、1.予約　2.チェックイン 3.チェックアウト　をイメージ
+クラス図とコラボレーション図にないフローは考えないで
+csvファイルに情報は管理して
+もし、実装でわからないことや追加したほうがいいと思うことは必ず確認を取って
+
+
+クラス図の注意事項
+＜失敗したときの返り値について＞
+
+検索などが失敗した場合、Nullを返す。呼び出し元は、返り値がNullだった場合警告を表示し、何らかの値が返ってきている場合はそのまま処理を続ける
+
+＜返り値について＞
+
+(ReservationControl) getRoomStatus & (Grade) getPriceAndVacantRoomNo
+=> Map<string, int> ["price": 10000, "room_num": 10]
+
+(ReservationControl) getPlanInfo(): int[]
+返り値はint型の配列で、0番目にプランAの値段、１番目にプランBの値段、２番目にプランCの値段
+
+(CheckinControl) checkin & (CheckoutControl) findReservationByRoomNo & (Reservation) getReservationInfo
+=> Map<string, Object> [
+"reservation_no": 01234,
+"price": 10000,
+"checkin_date": 2025-07-04-10:00,
+"checkout_date": 2025-07-05-10:00,
+"people_num": 2,
+"room_no": 101,
+"plan": "A",
+"user_name": "Yamada Tarou",
+"user_mail_address": "abc@example.com",
+"user_telephone_no": 00011112222
+]
+
+※なぜ予約オブジェクトをそのまま返さないの？
+→予約クラスの変数はprivateで直接見られないから
+
+
+＜引数について＞
+(RC) allocateRoome(grade: int)
+引数gradeは「スタンダードなら０」、「デラックスなら1」、「スイートなら2」

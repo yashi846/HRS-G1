@@ -1,0 +1,25 @@
+sequenceDiagram
+    participant 利用者
+    participant フロント
+    participant CheckoutUI
+    participant CheckoutControl
+    participant Reservation
+    participant Room
+    participant Standard
+    participant Deluxe
+    participant Suite
+
+    利用者->>フロント: 1. 部屋番号を伝える
+    フロント->>CheckoutUI: 2. inputRoomNo(roomNo: int)
+    CheckoutUI->>CheckoutControl: 2.1. findReservationByRoomNo(roomNo: int)
+    CheckoutControl->>Reservation: 2.1.1. getReservationInfo()
+    CheckoutUI->>フロント: 2.2. showReservationContents(price: int)
+    フロント->>利用者: 3. 宿泊料を伝える
+    利用者->>フロント: 4. 宿泊料を支払う
+    フロント->>CheckoutUI: 5. completeCheckout()
+    CheckoutUI->>CheckoutControl: 5.1. completeCheckOut()
+    CheckoutControl->>Reservation: 5.1.1. setCheckoutDone()
+    CheckoutControl->>Standard: 5.1.2. registerVacantRoom(roomNo: int)
+    CheckoutControl->>Deluxe: 5.1.3. registerVacantRoom(roomNo: int)
+    CheckoutControl->>Suite: 5.1.4. registerVacantRoom(roomNo: int)
+    CheckoutUI->>フロント: 5.2. showCheckoutComplete()

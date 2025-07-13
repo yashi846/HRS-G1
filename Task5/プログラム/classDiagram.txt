@@ -1,0 +1,116 @@
+@startuml
+class Reservation{
+  -reservationNo : int
+  -price : int
+  -checkinDate : date
+  -checkoutDate : date
+  -peopleNum : int
+  -checkoutDoneFlag : boolean
+  -checkinDoneFlag : boolean
+  -room : Room
+  -plan : Plan
+  -userInfo : UserInfo
+  +getReservationInfo() : HashMap
+  +setCheckoutDone() : void
+  +setCheckinDone() : void
+  +Reservation(checkinDate: date, checkoutDate: date, peopleNum: int, room: Room, plan :Plan, userInfo: userInfo) : Reservation
+}
+class Room{
+  +roomNo : int
+}
+class Grade{
+  -price : int
+  -vacantRoomNum : int
+  -vacantRoomsHash : HashMap
+  +registerVacantRoom(roomNo: int) : void
+  +getPriceAndVacantRoomNo(checkinDate: date, checkoutDate: date, peopleNum: int) : HashMap
+  +getAVacantRoom() : Room
+  +setTheRoomAsReserved(roomNum: int) : void
+}
+class Suite
+class Plan{
+  -price : int
+  +getPrice() : int
+}
+class Standard
+class Deluxe
+class PlanA
+class PlanB
+class PlanC
+Room -- Reservation
+Room --o Standard
+Room --o Deluxe
+Room --o Suite
+Standard --|> Grade
+Deluxe --|> Grade
+Suite --|> Grade
+PlanA --|> Plan
+PlanB --|> Plan
+PlanC --|> Plan
+Reservation -- PlanA
+PlanC -- Reservation
+PlanB -- Reservation
+class ReservationUI{
+  +inputDateAndPeopleNum() : void
+  -showEachGradePriceAndVacantRoomNum(price:int, roomNum:int) : void
+  -showAlert() : void
+  +selectGrade() : void
+  +selectPlan() : void
+  -showPlan(planAPrice:int, planBPrice:int, planCPrice:int) : void
+  -showResrvationInfo(reservationNo:int) : void
+  +inputUserInfo() : void
+  -showUserinfoCheck() : void
+  +inputUserInfoCorrectness() : void
+}
+class ReservationControl{
+  +getRoomStatus(checkinDate:date, checkoutDate:date, peopleNum:int) : HashMap
+  +allocateRoom(grade:int) : Room
+  +getPlanInfo() : int
+  +createReservation(checkinDate:date, checkoutDate:date, peopleNum:int, room:Room, plan:Plan, userInfo:UserInfo) : Reservation
+  +createUserInfo(name:string, mailAddress:stringm, telephoneNo:string) : UserInfo
+}
+class CheckinUI{
+  +inputReservationNum() : void
+  -showCheckinComplete(roomNo:int) : void
+  -showAlert() : void
+}
+class CheckinControl{
+  +checkin(reservation_no: int) : HashMap
+}
+class CheckoutUI{
+  +inputRoomNo() : void
+  +completeCheckout() : void
+  -showReservationContents(price:int) : void
+  -showCheckoutComplete() : void
+  -showAlert() : void
+}
+class CheckoutControl{
+  +findReservationByRoomNo(roomNo:int) : HashMap
+  +completeCheckOut() : void
+}
+ReservationUI --> ReservationControl
+ReservationControl --> Standard
+ReservationControl --> Deluxe
+ReservationControl --> Suite
+ReservationControl --> PlanA
+ReservationControl --> PlanC
+ReservationControl --> PlanB
+ReservationControl ..> Reservation
+CheckinUI --> CheckinControl
+CheckinControl --> Reservation
+CheckoutUI --> CheckoutControl
+CheckoutControl --> Reservation
+CheckoutControl --> Suite
+CheckoutControl --> Deluxe
+CheckoutControl --> Standard
+class UserInfo{
+  -name : string
+  -mailAddress : string
+  -telephoneNo : string
+}
+UserInfo -- Reservation
+ReservationControl ..> UserInfo
+class ユーザーインターフェース
+class アプリケーション
+class ドメイン
+@enduml

@@ -1,0 +1,52 @@
+sequenceDiagram
+    participant 利用者
+    participant ReservationUI
+    participant ReservationControl
+    participant PlanA
+    participant PlanB
+    participant PlanC
+    participant Standard
+    participant Deluxe
+    participant Suite
+    participant Room
+    participant Reservation
+    participant UserInfo
+
+    利用者->>ReservationUI: 1. inputDateAndPeopleNum()
+    ReservationUI->>ReservationControl: 1.1. getRoomStatus(checkinDate: date, checkoutDate: date, peopleNum: int)
+    ReservationControl->>Standard: 1.1.1. getPriceAndVacantRoomNo(checkinDate: date, checkoutDate: date, peopleNum: int)
+    ReservationControl->>Deluxe: 1.1.2. getPriceAndVacantRoomNo(checkinDate: date, checkoutDate: date, peopleNum: int)
+    ReservationControl->>Suite: 1.1.3. getPriceAndVacantRoomNo(checkinDate: date, checkoutDate: date, peopleNum: int)
+
+    alt 予約可能な部屋あり
+        ReservationUI->>利用者: 1.2. showEachGradePriceAndVacantRoomNum(price: int, roomNum: int)
+        利用者->>ReservationUI: 2. selectGrade()
+        ReservationUI->>ReservationControl: 2.1. allocateRoom(grade: int)
+        ReservationControl->>Standard: 2.1.1. getAVacantRoom()
+        ReservationControl->>Deluxe: 2.1.2. getAVacantRoom()
+        ReservationControl->>Suite: 2.1.3. getAVacantRoom()
+
+        利用者->>ReservationUI: 3. selectPlan()
+        ReservationUI->>ReservationControl: 2.2. getPlanInfo()
+        ReservationControl->>PlanA: 2.2.1. getPrice()
+        ReservationControl->>PlanB: 2.2.2. getPrice()
+        ReservationControl->>PlanC: 2.2.3. getPrice()
+        ReservationUI->>利用者: 2.3. showPlan(planAPrice: int, planBPrice: int, planCPrice: int)
+
+        利用者->>ReservationUI: 4. inputUserInfo()
+        ReservationUI->>利用者: 4.1. showUserinfoCheck()
+        利用者->>ReservationUI: 5. inputUserInfoCorrectness()
+        alt 個人情報が正しい
+            ReservationUI->>ReservationControl: 5.1. createUserInfo(name: string, mailAddress: string, telephoneNo: int)
+            ReservationControl->>UserInfo: 5.1.1. UserInfo()
+            ReservationUI->>ReservationControl: 5.2. createReservation(checkinDate: date, checkoutDate: date, peopleNum: int, room: Room, plan: Plan, userInfo: UserInfo)
+            ReservationControl->>Reservation: 5.1.2. Reservation()
+            ReservationControl->>Standard: 3.1.1. setTheRoomAsReserved(roomNo: int)
+            ReservationControl->>Deluxe: 3.1.2. setTheRoomAsReserved(roomNo: int)
+            ReservationControl->>Suite: 3.1.3. setTheRoomAsReserved(roomNo: int)
+        else 個人情報が正しくない
+            ReservationUI->>利用者: 5.2. inputUserInfoAgain()
+        end
+    else 予約可能な部屋なし
+        ReservationUI->>利用者: 1.3. showAlert()
+    end
