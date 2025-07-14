@@ -20,7 +20,6 @@ public abstract class Grade {
     }
 
     // クラス図から作成 - 空室登録
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // 指定された部屋番号を空室リストに追加し、空室数をインクリメントする
     public void registerVacantRoom(int roomNo) {
         if (!vacantRoomsHash.containsKey(roomNo)) {
@@ -34,7 +33,6 @@ public abstract class Grade {
     // 指定された条件での価格と空室数をHashMapで返却する
 
     // クラス図から作成 - 価格と空室数取得
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // 指定された条件での価格と空室数をHashMapで返却する
     public Map<String, Integer> getPriceAndVacantRoomNo(String checkinDate, String checkoutDate, int peopleNum) {
         Map<String, Integer> result = new HashMap<>();
@@ -44,7 +42,6 @@ public abstract class Grade {
     }
 
     // クラス図から作成 - 空室取得
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // 空いている部屋を1つ返す（なければnull）
     public Room getAVacantRoom() {
         for (Room room : vacantRoomsHash.values()) {
@@ -54,7 +51,6 @@ public abstract class Grade {
     }
 
     // クラス図から作成 - 部屋予約設定
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // 部屋を予約済みにする（空室リストから削除し、空室数をデクリメント）
     public void setTheRoomAsReserved(int roomNo) {
         if (vacantRoomsHash.containsKey(roomNo)) {
