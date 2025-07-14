@@ -5,7 +5,6 @@ public class ReservationUI {
     private Scanner scanner = new Scanner(System.in);
 
     // クラス図から作成 - 日付と人数の入力を受け付ける
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // クラス図では戻り値voidだが、実装では文字列配列を返す
     public String[] inputDateAndPeopleNum() {
         System.out.println("=== 予約画面 ===");
@@ -23,7 +22,6 @@ public class ReservationUI {
     }
 
     // クラス図から作成 - 部屋グレードの選択を受け付ける
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // クラス図では戻り値voidだが、実装では選択値を返す
     public int selectGrade() {
         System.out.println("部屋グレードを選択してください: 0=スタンダード 1=デラックス 2=スイート");
@@ -36,7 +34,6 @@ public class ReservationUI {
     }
 
     // クラス図から作成 - プランの選択を受け付ける
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // クラス図では戻り値voidだが、実装では選択値を返す
     public int selectPlan() {
         System.out.println("プランを選択してください: 0=プランA 1=プランB 2=プランC");
@@ -49,7 +46,6 @@ public class ReservationUI {
     }
 
     // クラス図から作成 - ユーザー情報の入力を受け付ける
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // クラス図では戻り値voidだが、実装では文字列配列を返す
     public String[] inputUserInfo() {
         scanner.nextLine(); // バッファクリア
@@ -63,7 +59,6 @@ public class ReservationUI {
     }
 
     // クラス図から作成 - ユーザー情報の正確性確認を受け付ける
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // クラス図では戻り値voidだが、実装では確認結果を返す
     public boolean inputUserInfoCorrectness() {
         System.out.print("入力内容は正しいですか？ (y/n): ");
@@ -72,7 +67,6 @@ public class ReservationUI {
     }
 
     // クラス図から作成 - 各グレードの価格と空室数を表示する（privateメソッド）
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // クラス図ではprivateだが、実装ではpublicで作成
     public void showEachGradePriceAndVacantRoomNum(int price, int roomNum) {
         System.out.println("グレードごとの価格: " + price + "円、空室数: " + roomNum);
@@ -90,7 +84,6 @@ public class ReservationUI {
     }
 
     // クラス図から作成 - プラン情報を表示する（privateメソッド）
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // クラス図ではprivateだが、実装ではpublicで作成
     public void showPlan(int planAPrice, int planBPrice, int planCPrice) {
         System.out.println("プランA: " + planAPrice + "円");
@@ -99,7 +92,6 @@ public class ReservationUI {
     }
 
     // クラス図から作成 - 警告メッセージを表示する（privateメソッド）
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // クラス図ではprivateだが、実装ではpublicで作成
     public void showAlert() {
         System.out.println("[警告] 入力内容に誤りがあります。もう一度ご確認ください。");
@@ -147,7 +139,6 @@ public class ReservationUI {
     }
 
     // csvファイルのために追加 - ユーザー情報を再入力させる（コラボレーション図 5.2）
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // コラボレーション図にあるがクラス図にはないメソッド
     public String[] inputUserInfoAgain() {
         System.out.println("[再入力] 個人情報を再度入力してください。");
