@@ -12,6 +12,14 @@
 <img width="880" height="666" alt="演習6-3-1_予約のキャンセルの相互作用" src="https://github.com/user-attachments/assets/815595ab-c6df-483e-9f7a-30b6fe6d7aff" />
 
 ## 6-3:分析レベルクラス図
+- 追加したクラス
+<img width="557" height="716" alt="image" src="https://github.com/user-attachments/assets/b88cf85b-0191-4dc6-9075-3c305b08a1f4" />
+
+- 追加したメソッド（対応する予約を消す）
+<img width="788" height="627" alt="image" src="https://github.com/user-attachments/assets/3922f10b-41ae-48dc-ad08-bf90ee404549" />
+
+- 全体
+<img width="3757" height="2057" alt="image" src="https://github.com/user-attachments/assets/21ffa140-cdb2-40ab-9d94-acb03afb47e6" />
 
 ## 6-4:パッケージ図
 ### インターフェイス
