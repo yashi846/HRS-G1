@@ -2,7 +2,6 @@ import java.util.Map;
 
 public class ReservationControl {
     // クラス図から作成 - 部屋状況取得
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // 指定された条件での各グレードの部屋状況を取得し、統合して返却する
     public Map<String, Integer> getRoomStatus(String checkinDate, String checkoutDate, int peopleNum) {
         // コラボレーション図 1.1.1~1.1.3に従って各グレードから情報を取得
