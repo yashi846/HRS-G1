@@ -99,7 +99,6 @@ public class Main {
                     }
                     break;
                 case 4:
-                    // AIによる実装のためロジックが本来の意図と異なる可能性あり
                     // 予約キャンセル機能
                     CancelUI cancelUI = new CancelUI();
                     int reservationNoToCancel = cancelUI.inputReservationNo();

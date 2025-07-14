@@ -157,7 +157,6 @@ public class Reservation {
 
     // getter/setter省略
 
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // 対応する予約を削除する（キャンセル機能用）
     public void deleteTheReservation() {
         // 部屋番号とグレードを取得

@@ -5,6 +5,7 @@ import java.util.Map;
 public class CancelProcess {
 
     // AIによる実装のためロジックが本来の意図と異なる可能性あり
+    // クラス図では、引数が無い！！！！
     // 予約情報を検索し、存在する場合は削除処理を行う
     public boolean searchReservationInfo(int reservationNo) {
         // CSVから予約情報を読み込み
