@@ -23,13 +23,13 @@
 
 ## 6-4:パッケージ図
 ### インターフェイス
-
+<img width="841" height="934" alt="userinterface" src="https://github.com/user-attachments/assets/b98c4753-f8c6-4646-aac4-001909236243" />
 
 ### アプリケーション
-
+<img width="571" height="812" alt="application" src="https://github.com/user-attachments/assets/c84efbfb-5789-4102-b598-5cf2005905f3" />
 
 ### ドメイン
+<img width="1623" height="784" alt="domain" src="https://github.com/user-attachments/assets/7bffe695-bca0-4130-b72a-1e46c736122c" />
 
 
-### 全体
 
