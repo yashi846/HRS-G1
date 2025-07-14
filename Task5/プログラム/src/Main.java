@@ -8,7 +8,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.println("ホテル予約システム");
-            System.out.println("1.予約 2.チェックイン 3.チェックアウト 0.終了");
+            System.out.println("1.予約 2.チェックイン 3.チェックアウト 4.予約キャンセル 0.終了");
             int sel = sc.nextInt();
             if (sel == 0)
                 break;
@@ -96,6 +96,19 @@ public class Main {
                         checkoutUI.completeCheckout();
                         checkoutControl.completeCheckOut(roomNo);
                         checkoutUI.showCheckoutComplete();
+                    }
+                    break;
+                case 4:
+                    // AIによる実装のためロジックが本来の意図と異なる可能性あり
+                    // 予約キャンセル機能
+                    CancelUI cancelUI = new CancelUI();
+                    int reservationNoToCancel = cancelUI.inputReservationNo();
+                    CancelProcess cancelProcess = new CancelProcess();
+                    boolean cancelResult = cancelProcess.searchReservationInfo(reservationNoToCancel);
+                    if (cancelResult) {
+                        cancelUI.showCancelProcessDone();
+                    } else {
+                        cancelUI.showAlert();
                     }
                     break;
                 default:

@@ -156,4 +156,53 @@ public class Reservation {
     }
 
     // getter/setter省略
+
+    // AIによる実装のためロジックが本来の意図と異なる可能性あり
+    // 対応する予約を削除する（キャンセル機能用）
+    public void deleteTheReservation() {
+        // 部屋番号とグレードを取得
+        int roomNo = this.room.getRoomNo();
+
+        // 既存の部屋状況をCSVから読み込み、グレード別にインスタンスを作成
+        if (roomNo >= 101 && roomNo <= 110) {
+            // Standard grade
+            Standard standard = new Standard(10000, 10);
+            // 既存の部屋状況を読み込み
+            java.util.Map<Integer, Room> standardRooms = CsvManager.loadRoomStatus("standard_rooms.csv");
+            for (Room room : standardRooms.values()) {
+                standard.registerVacantRoom(room.getRoomNo());
+            }
+            // キャンセルした部屋を空室として登録
+            standard.registerVacantRoom(roomNo);
+            // CSVファイルに保存
+            CsvManager.saveRoomStatus("standard_rooms.csv", standard.getVacantRoomsHash());
+        } else if (roomNo >= 201 && roomNo <= 210) {
+            // Deluxe grade
+            Deluxe deluxe = new Deluxe(15000, 5);
+            // 既存の部屋状況を読み込み
+            java.util.Map<Integer, Room> deluxeRooms = CsvManager.loadRoomStatus("deluxe_rooms.csv");
+            for (Room room : deluxeRooms.values()) {
+                deluxe.registerVacantRoom(room.getRoomNo());
+            }
+            // キャンセルした部屋を空室として登録
+            deluxe.registerVacantRoom(roomNo);
+            // CSVファイルに保存
+            CsvManager.saveRoomStatus("deluxe_rooms.csv", deluxe.getVacantRoomsHash());
+        } else if (roomNo >= 301 && roomNo <= 310) {
+            // Suite grade
+            Suite suite = new Suite(20000, 2);
+            // 既存の部屋状況を読み込み
+            java.util.Map<Integer, Room> suiteRooms = CsvManager.loadRoomStatus("suite_rooms.csv");
+            for (Room room : suiteRooms.values()) {
+                suite.registerVacantRoom(room.getRoomNo());
+            }
+            // キャンセルした部屋を空室として登録
+            suite.registerVacantRoom(roomNo);
+            // CSVファイルに保存
+            CsvManager.saveRoomStatus("suite_rooms.csv", suite.getVacantRoomsHash());
+        }
+
+        // CSVファイルから該当予約を削除
+        CsvManager.deleteReservation(this.reservationNo);
+    }
 }

@@ -18,8 +18,11 @@ public class CsvManager {
                             info.get("checkin_date") + "," +
                             info.get("checkout_date") + "," +
                             info.get("people_num") + "," +
+                            reservation.isCheckoutDone() + "," +
+                            reservation.isCheckinDone() + "," +
                             info.get("room_no") + "," +
                             info.get("plan_name") + "," +
+                            reservation.getPlan().getPrice() + "," +
                             info.get("user_name") + "," +
                             info.get("user_mail_address") + "," +
                             info.get("user_telephone_no"));
@@ -36,24 +39,36 @@ public class CsvManager {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] data = line.split(",");
-                if (data.length >= 10) {
+                if (data.length >= 13) {
                     int reservationNo = Integer.parseInt(data[0]);
                     int price = Integer.parseInt(data[1]);
                     String checkinDate = data[2];
                     String checkoutDate = data[3];
                     int peopleNum = Integer.parseInt(data[4]);
-                    int roomNo = Integer.parseInt(data[5]);
-                    String planType = data[6];
-                    String userName = data[7];
-                    String userMail = data[8];
-                    String userTel = data[9];
+                    boolean checkoutDoneFlag = Boolean.parseBoolean(data[5]);
+                    boolean checkinDoneFlag = Boolean.parseBoolean(data[6]);
+                    int roomNo = Integer.parseInt(data[7]);
+                    String planType = data[8];
+                    int planPrice = Integer.parseInt(data[9]);
+                    String userName = data[10];
+                    String userMail = data[11];
+                    String userTel = data[12];
 
                     Room room = new Room(roomNo);
-                    Plan plan = createPlanFromType(planType, price);
+                    Plan plan = createPlanFromType(planType, planPrice);
                     UserInfo userInfo = new UserInfo(userName, userMail, userTel);
 
                     Reservation reservation = new Reservation(reservationNo, price, checkinDate, checkoutDate,
                             peopleNum, room, plan, userInfo);
+
+                    // フラグを設定
+                    if (checkoutDoneFlag) {
+                        reservation.setCheckoutDone();
+                    }
+                    if (checkinDoneFlag) {
+                        reservation.setCheckinDone();
+                    }
+
                     reservations.put(reservationNo, reservation);
                 }
             }
@@ -203,5 +218,41 @@ public class CsvManager {
             System.err.println("CSV読み込みエラー: " + e.getMessage());
         }
         return reservations;
+    }
+
+    // AIによる実装のためロジックが本来の意図と異なる可能性あり
+    // 指定された予約番号の予約をCSVファイルから削除する
+    public static void deleteReservation(int reservationNo) {
+        try {
+            // 現在の予約データを読み込み
+            Map<Integer, Reservation> reservations = loadReservations();
+
+            // 指定された予約番号の予約を削除
+            reservations.remove(reservationNo);
+
+            // CSVファイルを上書きして保存
+            try (PrintWriter writer = new PrintWriter(
+                    new OutputStreamWriter(new FileOutputStream("reservations.csv", false), StandardCharsets.UTF_8))) {
+                for (Reservation reservation : reservations.values()) {
+                    Map<String, Object> info = reservation.getReservationInfo();
+                    writer.println(
+                            info.get("reservation_no") + "," +
+                                    info.get("price") + "," +
+                                    info.get("checkin_date") + "," +
+                                    info.get("checkout_date") + "," +
+                                    info.get("people_num") + "," +
+                                    reservation.isCheckoutDone() + "," +
+                                    reservation.isCheckinDone() + "," +
+                                    info.get("room_no") + "," +
+                                    info.get("plan_name") + "," +
+                                    reservation.getPlan().getPrice() + "," +
+                                    info.get("user_name") + "," +
+                                    info.get("user_mail_address") + "," +
+                                    info.get("user_telephone_no"));
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("CSV削除エラー: " + e.getMessage());
+        }
     }
 }
