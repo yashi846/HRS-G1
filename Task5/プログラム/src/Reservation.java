@@ -72,7 +72,6 @@ public class Reservation {
     // 予約情報をHashMap形式で返却し、UI表示などで利用される
 
     // クラス図から作成 - 予約情報取得
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // 予約情報をHashMap形式で返却し、UI表示などで利用される
     public Map<String, Object> getReservationInfo() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
