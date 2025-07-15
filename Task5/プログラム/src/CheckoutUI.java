@@ -5,7 +5,6 @@ public class CheckoutUI {
     private Scanner scanner = new Scanner(System.in);
 
     // クラス図から作成 - 部屋番号の入力を受け付ける
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // クラス図では戻り値voidだが、実装では部屋番号を返す
     public int inputRoomNo() {
         System.out.println("=== チェックアウト画面 ===");

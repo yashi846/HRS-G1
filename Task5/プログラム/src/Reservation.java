@@ -90,7 +90,6 @@ public class Reservation {
     }
 
     // クラス図から作成 - チェックアウト完了設定
-    // AIによる実装のためロジックが本来の意図と異なる可能性あり
     // チェックアウト完了フラグをtrueに設定する
     public void setCheckoutDone() {
         checkoutDoneFlag = true;
