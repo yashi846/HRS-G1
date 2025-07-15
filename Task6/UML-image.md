@@ -26,7 +26,7 @@
 <img width="841" height="934" alt="userinterface" src="https://github.com/user-attachments/assets/b98c4753-f8c6-4646-aac4-001909236243" />
 
 ### アプリケーション
-<img width="571" height="812" alt="application" src="https://github.com/user-attachments/assets/c84efbfb-5789-4102-b598-5cf2005905f3" />
+<img width="836" height="540" alt="application" src="https://github.com/user-attachments/assets/b79b13ba-202e-43d0-bdcd-7e3d02dc30c6" />
 
 ### ドメイン
 <img width="1623" height="784" alt="domain" src="https://github.com/user-attachments/assets/7bffe695-bca0-4130-b72a-1e46c736122c" />
