@@ -85,18 +85,8 @@ public class Main {
                     break;
                 case 3:
                     CheckoutUI checkoutUI = new CheckoutUI();
-                    int roomNo = checkoutUI.inputRoomNo();
-                    CheckoutControl checkoutControl = new CheckoutControl();
-                    java.util.Map<String, Object> reservationInfo = checkoutControl.findReservationByRoomNo(roomNo);
-                    if (reservationInfo == null) {
-                        checkoutUI.showAlert();
-                    } else {
-                        int price = (int) reservationInfo.get("price");
-                        checkoutUI.showReservationContents(price);
-                        checkoutUI.completeCheckout();
-                        checkoutControl.completeCheckOut(roomNo);
-                        checkoutUI.showCheckoutComplete();
-                    }
+                    checkoutUI.inputRoomNo();
+                    checkoutUI.completeCheckout();
                     break;
                 case 4:
                     // 予約キャンセル機能
