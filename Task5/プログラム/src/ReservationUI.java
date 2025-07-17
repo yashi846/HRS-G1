@@ -137,11 +137,4 @@ public class ReservationUI {
         System.out.println("予約が完了しました。");
         System.out.println("==================");
     }
-
-    // csvファイルのために追加 - ユーザー情報を再入力させる（コラボレーション図 5.2）
-    // コラボレーション図にあるがクラス図にはないメソッド
-    public String[] inputUserInfoAgain() {
-        System.out.println("[再入力] 個人情報を再度入力してください。");
-        return inputUserInfo(); // 既存のinputUserInfoメソッドを再利用
-    }
 }
