@@ -92,9 +92,9 @@ public class ReservationControl {
     }
 
     // サンプル用フィールド
-    private Standard standard = new Standard(10000, 10);
-    private Deluxe deluxe = new Deluxe(15000, 5);
-    private Suite suite = new Suite(20000, 2);
+    private Standard standard = new Standard(10000, 0);
+    private Deluxe deluxe = new Deluxe(15000, 0);
+    private Suite suite = new Suite(20000, 0);
     private int reservationSeq = 1000;
 
     // コンストラクタで初期部屋を登録
@@ -103,6 +103,7 @@ public class ReservationControl {
         loadRoomStatusFromCsv();
 
         // CSVファイルが存在しない場合の初期部屋登録
+        /* この処理があると、すべての部屋が予約されている場合に正しく処理が行われない！！
         if (standard.getVacantRoomNum() == 0) {
             // Standard rooms (101-110)
             for (int i = 101; i <= 110; i++) {
@@ -121,6 +122,7 @@ public class ReservationControl {
                 suite.registerVacantRoom(i);
             }
         }
+        */
     }
 
     // csvファイルのために追加
