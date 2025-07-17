@@ -21,6 +21,12 @@ public class CheckinControl {
         Reservation reservation = reservationMap.get(reservationNo);
         if (reservation == null)
             return null;
+
+        // チェックアウト処理を参考にして、既にチェックイン済みの予約はnullを返す
+        if (reservation.isCheckinDone()) {
+            return null;
+        }
+
         // コラボレーション図 2.1.2: setCheckinDone()を呼び出し
         reservation.setCheckinDone();
 
