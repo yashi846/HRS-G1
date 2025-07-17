@@ -92,17 +92,31 @@ public class ReservationControl {
     }
 
     // サンプル用フィールド
-    private Standard standard = new Standard(10000, 10);
-    private Deluxe deluxe = new Deluxe(15000, 5);
-    private Suite suite = new Suite(20000, 2);
-    private int reservationSeq = 1000;
+    private Standard standard = new Standard(10000, 0);
+    private Deluxe deluxe = new Deluxe(15000, 0);
+    private Suite suite = new Suite(20000, 0);
+    private int reservationSeq = 0;
 
     // コンストラクタで初期部屋を登録
     public ReservationControl() {
         // csvファイルのために追加 - 部屋状況をCSVから読み込み
         loadRoomStatusFromCsv();
 
+        // reservation.csvから予約情報を取得
+        Map<Integer, Reservation> reservationMap = CsvManager.loadReservations();
+        // reservationMapのうち予約番号の最大を探す
+        int maxResNo = 0;
+        for (Integer resNo : reservationMap.keySet()) {
+            if (resNo > maxResNo) {
+                maxResNo = resNo;
+            }
+        }
+        // 最大予約番号を次の予約番号として設定
+        // maxResNoが1000以下なら1000を、そうでなければ最大予約番号+1を設定
+        reservationSeq = maxResNo >= 1000 ? maxResNo + 1 : 1000;
+
         // CSVファイルが存在しない場合の初期部屋登録
+        /* この処理があると、すべての部屋が予約されている場合に正しく処理が行われない！！
         if (standard.getVacantRoomNum() == 0) {
             // Standard rooms (101-110)
             for (int i = 101; i <= 110; i++) {
@@ -121,6 +135,7 @@ public class ReservationControl {
                 suite.registerVacantRoom(i);
             }
         }
+        */
     }
 
     // csvファイルのために追加
