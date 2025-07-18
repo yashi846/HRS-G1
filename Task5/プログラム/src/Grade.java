@@ -36,7 +36,26 @@ public abstract class Grade {
     // 指定された条件での価格と空室数をHashMapで返却する
     public Map<String, Integer> getPriceAndVacantRoomNo(String checkinDate, String checkoutDate, int peopleNum) {
         Map<String, Integer> result = new HashMap<>();
-        result.put("price", price);
+
+        // 宿泊日数を計算
+        int days = 1; // デフォルト値
+        if (checkinDate != null && checkoutDate != null) {
+            try {
+                java.text.SimpleDateFormat dateFormat = new java.text.SimpleDateFormat("yyyy-MM-dd");
+                java.util.Date checkin = dateFormat.parse(checkinDate);
+                java.util.Date checkout = dateFormat.parse(checkoutDate);
+                long timeDiff = checkout.getTime() - checkin.getTime();
+                long daysDiff = timeDiff / (1000 * 60 * 60 * 24);
+                days = (int) Math.max(1, daysDiff);
+            } catch (java.text.ParseException e) {
+                days = 1;
+            }
+        }
+
+        // 基本価格に日数と人数を適用
+        int totalPrice = price * days * peopleNum;
+
+        result.put("price", totalPrice);
         result.put("room_num", vacantRoomNum);
         return result;
     }

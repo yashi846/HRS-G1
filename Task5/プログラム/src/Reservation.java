@@ -48,7 +48,6 @@ public class Reservation {
         }
 
         // グレード価格とプラン価格を組み合わせて総料金を計算
-        this.price = gradePrice + (plan != null ? plan.getPrice() : 0);
         // 文字列をDate型に変換
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         try {
@@ -59,6 +58,18 @@ public class Reservation {
             this.checkinDate = null;
             this.checkoutDate = null;
         }
+
+        // 宿泊日数を計算
+        int days = 1; // デフォルト値
+        if (this.checkinDate != null && this.checkoutDate != null) {
+            long timeDiff = this.checkoutDate.getTime() - this.checkinDate.getTime();
+            long daysDiff = timeDiff / (1000 * 60 * 60 * 24);
+            days = (int) Math.max(1, daysDiff);
+        }
+
+        // グレード価格、プラン価格、日数、人数を組み合わせて総料金を計算
+        int basePricePerNight = gradePrice + (plan != null ? plan.getPrice() : 0);
+        this.price = basePricePerNight * days * peopleNum;
         this.peopleNum = peopleNum;
         this.room = room;
         this.plan = plan;
